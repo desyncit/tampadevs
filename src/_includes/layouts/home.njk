@@ -93,17 +93,47 @@ layout: layouts/base.njk
       <a class="sponsor-button td-alert-banner" href="https://opencollective.com/tampadevs">🤝 Become a sponsor 🤝</a>
     </div>
   </div>
-</section>
-<section
-      class="container sponsor-container">
-      
-  <h3>Donors</h3>
-      <div class="sponsor-list sponsor-list__silver">
-
-     <img src="https://opencollective.com/tampadevs/backers.svg?width=700&button=false" />
-
-    <div class="sponsor-button-wrapper">
-      <a class="sponsor-button td-alert-banner" href="https://opencollective.com/tampadevs">🤝 Become a donor 🤝</a>
-    </div>
-  </div>
   </section>
+  {#
+    TODO: Refine Donor and Contributor sections because
+          are just proof of concept implementations, and not ready for production.
+  #}
+  <section class="container sponsor-container">
+    <h3>Donors</h3>
+    <div class="sponsor-list sponsor-list__silver"  style="display: flex; flex-wrap: wrap; justify-content: center">
+        {% for contributor in FinancialContributors.all %}
+          <article style="display: flex; flex-direction: column; align-items: center; margin: 1rem; flex-basis: 18%;">
+            <a href="{{ contributor.profile }}" target="_blank" rel="noopener noreferrer">
+              <img src="{{ contributor.image if contributor.image else "/_assets/img/people/no-avatar.jpg" }}" alt="{{ contributor.name }}" width="100" height="100">
+            </a>
+            <br />
+            <a href="{{ contributor.profile }}" target="_blank" rel="noopener noreferrer">{{ contributor.name }}</a>
+          </article>
+        {% endfor %}
+      <div class="sponsor-button-wrapper">
+        <a class="sponsor-button td-alert-banner" href="https://opencollective.com/tampadevs">🤝 Become a donor 🤝</a>
+      </div>
+    </div>
+  </section>
+
+<section class="container sponsor-container">
+  <h3>Contributors</h3>
+  <div class="sponsor-list sponsor-list__silver"  style="display: flex; flex-wrap: wrap; justify-content: center">
+    {% for contributor in GithubContributors %}
+        <article style="display: flex; flex-direction: column; align-items: center; margin: 1rem; flex-basis: 18%">
+          <a href="{{ contributor.http_url }}">
+            <img src="{{ contributor.avatar_url }}" alt="{{ contributor.login }}" width="100" height="100">
+          </a>
+          <a href="{{ contributor.http_url }}">{{ contributor.login }}</a>
+        </article>
+    {% endfor %}
+  </div>
+</section>
+{% block styles %}
+  <style>
+    .sponsor-list article a, .sponsor-list a {
+      text-decoration: none;
+      border: none;
+    }
+  </style>
+{% endblock %}
