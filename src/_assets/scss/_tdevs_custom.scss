@@ -36,8 +36,10 @@
 
 .sponsor-container {
   padding: 50px;
-  margin-bottom: 100px !important;
   color: black;
+  h2 {
+    color: $colorOrange;
+  }
   h3 {
     background-color: rgb(230, 230, 230);
     margin-bottom: 4px;
@@ -63,7 +65,7 @@
     }
   }
   .sponsor-list img {
-    display: block;
+   display: block;
     margin: 0 auto;
     padding: 10px;
   }

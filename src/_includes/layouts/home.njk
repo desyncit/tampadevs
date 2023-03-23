@@ -92,13 +92,21 @@ layout: layouts/base.njk
     </div>
   </div>
 </section>
-<section
-      class="container sponsor-container">
-      
-  <h2>Donors</h3>
-      <div class="sponsor-list sponsor-list__silver">
-
-     <script src="https://opencollective.com/tampadevs/banner.js"></script>
+<section class="container sponsor-container contributor-container">
+  <h2>Donors</h2>
+  <div class="contributor-list">
+    {% for contributor in FinancialContributors.all %}
+      <article>
+        <a href="{{ contributor.profile }}" class="contributor-avatar" target="_blank" rel="noopener noreferrer">
+          <img src="{{ contributor.image if contributor.image else "/_assets/img/people/no-avatar.jpg" }}" alt="{{ contributor.name }}" width="60" height="60">
+        </a>
+        <a href="{{ contributor.profile }}" class="contributor-link" target="_blank" rel="noopener noreferrer">{{ contributor.name }}</a>
+      </article>
+    {% endfor %}
+    <div class="sponsor-button-wrapper">
+      <a class="sponsor-button td-alert-banner" href="https://opencollective.com/tampadevs" target="_blank" rel="noopener noreferrer">🤝 Become a donor 🤝</a>
+    </div>
+  </div>
 </section>
 
 <section class="container contributor-container">
