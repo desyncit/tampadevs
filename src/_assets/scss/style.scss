@@ -483,6 +483,7 @@ a:focus {
 @import "utility/mixin-sizing";
 @import "utility/utility";
 @import "pages/about";
+@import "block-contributors";
 @include spacings;
 @include bpMinXSmall {
   @include spacings(xs\:);
