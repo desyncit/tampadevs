@@ -15,14 +15,38 @@
     "name": "Charlton Trezevant",
     "team": ["Team Core", "Speaker", "Organizers"],
     "title": "Vice President of Tampa Devs",
-    "bio": "Senior Cybersecurity Consultant residing in St. Petersburg, Florida.",
+    "bio": "Cloud & Application Security consultant residing in St. Petersburg, Florida.",
     "img": "charlton_trezevant.jpeg",
     "href": {
       "type": "Website",
-      "url": "https://www.ctis.me/"
+      "url": "https://blog.ctis.me/"
     },
     "order": 2
   },  
+  {
+    "name": "Josef Siber",
+    "team": ["Team Core", "Organizers"],
+    "title": "Program Manager",
+    "bio": "Data Scientist, but still a big fan of gut hunches. Ad Hoc Statistician.",
+    "img": "josef_siber.jpg",
+    "href": {
+      "type": "LinkedIn",
+      "url": "https://www.linkedin.com/in/josef-sieber/"
+    },
+    "order": 3
+  }, 
+  {
+    "name": "Haritha Diraneyya",  
+    "team": ["Team Member", "Organizers"],
+    "title": "Master of Ceremonies",
+    "bio": "Project Manager with experience shipping video games on Unity. Passionate about salsa dancing and frontend development.",
+    "img": "haritha_diraneyya.png",
+    "href": {
+      "type": "LinkedIn",
+      "url": "https://www.linkedin.com/in/haritha-diraneyya/"
+    },
+    "order": 4
+  },
   {
     "name": "Lydia Hendriks",
     "team": ["Team Member", "Organizers"],
@@ -33,7 +57,7 @@
       "type": "Github",
       "url": "https://github.com/lhendriks1"
     },
-    "order": 3
+    "order": 5
   },
   {
     "name": "Ryan Harrigan",
@@ -51,18 +75,6 @@
     "name": "Davindra Tulsi",
     "team": ["Team Member"],
     "img": "davindra_tulsi.jpg"
-  },
-  {
-    "name": "Haritha Diraneyya",  
-    "team": ["Team Member", "Organizers"],
-    "title": "Master of Ceremonies",
-    "bio": "Project Manager with experience shipping video games on Unity. Passionate about salsa dancing and frontend development.",
-    "img": "haritha_diraneyya.png",
-    "href": {
-      "type": "LinkedIn",
-      "url": "https://www.linkedin.com/in/haritha-diraneyya/"
-    },
-    "order": 4
   },
   {
     "name": "Jonathan Li",
