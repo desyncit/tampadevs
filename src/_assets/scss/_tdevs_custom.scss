@@ -115,9 +115,44 @@
   width: 100%;
 }
 
+.cta-sponsor-and-donate {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  .sponsor-button {
+    width: 100%;
+    margin-right: 0;
+    @include bpMinXSmall() {
+      width: calc(50% - 16px);
+      &:nth-child(odd) {
+        margin-right: 32px;
+      }
+    }
+    // @include bpMinXSmall() {
+    //   padding: 15px;
+    //   margin-right: 4px;
+    //   width: calc(33.33% - 2.66px);
+    //   &:nth-child(3n) {
+    //     margin-right: 0;
+    //   }
+    // }
+  }
+}
+
 .sponsor-button {
   margin-top: 15px;
   max-width: 500px;
   padding: 15px 17px;
   font-size: 18px;
+}
+
+.donor-container {
+  .donor-block {
+    background-color: rgb(230, 230, 230);
+  }
+}
+
+.cta-job-btn {
+  font-size: 20px;
+  font-style:italic;
 }

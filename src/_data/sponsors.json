@@ -26,5 +26,17 @@
     "name": "USF College of Engineering",
     "logo": "usf-engineering-logo.png",
     "href": "https://www.usf.edu/engineering/"
+  },
+  {
+    "name": "Ace Host",
+    "logo": "ace_host.png",
+    "href": "https://www.acehost.com/",
+    "type": "gold"
+  },
+  {
+    "name": "Hillsborough Community County",
+    "logo": "hcc_logo.png",
+    "href": "https://www.hillsboroughcounty.org/en",
+    "type": "gold"
   }
 ]
