@@ -60,7 +60,7 @@ aos: false
       <h2 id="sponsors" class="container">Sponsors</h2>
       <div class="td-about-sponsor__wrapper">
         <div class="marquee">
-          {% for sponsor in sponsors %}
+          {% for sponsor in sponsors | sort(false, false, 'name') %}
             <a href="{{sponsor.href}}" class="sponsor" target="_blank" rel=”noopener noreferrer”>
               <img src="/_assets/misc/sponsors/{{sponsor.logo}}" alt=""/>
             </a>
