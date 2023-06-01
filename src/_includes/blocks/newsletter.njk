@@ -35,6 +35,29 @@
         </div>
       </div>
     </form>
+    <script>
+        function formSubmit(e) {
+          var req = new XMLHttpRequest();
+          req.open('POST', "https://newsletter.api.tampa.dev/subscribe", true);
+  
+          req.onload = function() { 
+            document.getElementById("mc-embedded-subscribe-form").reset();
+            document.getElementById("mc-embedded-subscribe").value = "Subscribed!"
+            document.getElementById("mc-embedded-subscribe").style.backgroundColor = "#B5E0B8"
+            console.log(req.responseText);
+          };
+
+          req.onerror = function() {
+            console.log("Newsletter subscription failed.")
+          };
+
+          req.send(new FormData(e.target));
+
+          e.preventDefault();
+        }
+
+        (function () {document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", formSubmit)})();
+    </script>
     <!--End mc_embed_signup-->
   </section>
 </div>
