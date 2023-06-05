@@ -1,5 +1,5 @@
 ---
-title: Profile: Made in Tampa on Tampa Devs
+title: Profile - Made in Tampa on Tampa Devs
 author: Charlton Trezevant
 date: 2023-06-05
 intro: Made in Tampa profiles Vincent, Charlton, and the rise of Tampa Devs
