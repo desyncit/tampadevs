@@ -34,7 +34,13 @@
     "type": "gold"
   },
   {
-    "name": "Hillsborough Community County",
+    "name": "Donut",
+    "logo": "donut_app_150.png",
+    "href": "https://www.donut.com/",
+    "type": "silver"
+  },
+  {
+    "name": "Hillsborough County",
     "logo": "hcc_logo.png",
     "href": "https://www.hillsboroughcounty.org/en",
     "type": "gold"

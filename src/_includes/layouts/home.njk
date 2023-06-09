@@ -51,6 +51,17 @@ layout: layouts/base.njk
     {# <div class="sponsor-item">
       <img src="/_assets/misc/sponsors/tdevs_transparent_grey_svg.svg" alt=""/>
     </div>
+      {# Silver Sponsor #}
+    </div>
+  <div class="sponsor-list sponsor-list__silver">
+    {% for sponsor in sponsors | sort(false, false, 'name') %}
+      {% if sponsor.type == "silver" %}
+        <a href="{{ sponsor.href }}" class="sponsor-item" target="_blank" rel="”noopener" noreferrer”>
+          <img src="/_assets/misc/sponsors/{{ sponsor.logo }}" alt=""/>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
     <div class="sponsor-item">
       <img src="/_assets/misc/sponsors/tdevs_transparent_grey_svg.svg" alt=""/>
     </div> #}
