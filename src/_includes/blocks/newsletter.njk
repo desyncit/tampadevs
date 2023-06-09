@@ -1,63 +1,75 @@
 <div class="td-newsletter">
-  <section class="container" id="newsletter">
+<section class="container" id="newsletter">
     <h2>Keep in touch</h2>
     <p>Stay informed with local tech news, upcoming events, job opportunities, and more from Tampa Devs.</p>
-    <form
-      action="https://newsletter.api.tampa.dev/subscribe"
-      method="post"
-      id="mc-embedded-subscribe-form"
-      name="mc-embedded-subscribe-form"
-      class="validate"
-      target="_blank"
-      novalidate>
-      <div id="mce-responses" class="clear">
-        <div class="response" id="mce-error-response" style="display:none"></div>
-        <div class="response" id="mce-success-response" style="display:none"></div>
-      </div>
-      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-        <input type="text" name="b_0faea843d029399bef7962992_686a0f7b4b" tabindex="-1" value="">
-      </div>
-      <div class="td-newsletter__group">
-        <div class="td-newsletter__field mc-field-group">
-          <label for="mce-FNAME">First Name</label>
-          <input type="text" value="" name="firstname" class="" id="mce-FNAME" placeholder="First name">
+    <form action="https://newsletter.api.tampa.dev/subscribe" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
         </div>
-        <div class="td-newsletter__field mc-field-group">
-          <label for="mce-LNAME">Last Name</label>
-          <input type="text" value="" name="lastname" class="" id="mce-LNAME" placeholder="Last name">
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+            <input type="text" name="b_0faea843d029399bef7962992_686a0f7b4b" tabindex="-1">
         </div>
-        <div class="td-newsletter__field mc-field-group">
-          <label for="mce-EMAIL">Email Address</label>
-          <input type="email" value="" name="email" class="required email" id="mce-EMAIL" placeholder="Email Address">
+        <div class="td-newsletter__group">
+            <div class="td-newsletter__field mc-field-group">
+                <label for="mce-FNAME">First Name</label>
+                <input type="text" name="firstname" class="" id="mce-FNAME" placeholder="First name">
+            </div>
+            <div class="td-newsletter__field mc-field-group">
+                <label for="mce-LNAME">Last Name</label>
+                <input type="text" name="lastname" class="" id="mce-LNAME" placeholder="Last name">
+            </div>
+            <div class="td-newsletter__field mc-field-group">
+                <label for="mce-EMAIL">Email Address</label>
+                <input type="email" name="email" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                <input type="hidden" name="phone" class="required phone" id="mce-phone" value="(813) 555-0199" placeholder="Phone">
+            </div>
+            <div class="td-newsletter__field mc-field-group" style="display: none">
+                <label for="mce-verify-EMAIL">Verify Email Address</label>
+                <input type="email" name="verify_email" class="required email" id="mce-EMAIL-verify" placeholder="Verify Email Address">
+            </div>
+            <div class="td-newsletter__field">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: rgb(255, 255, 255); text-transform: uppercase; color: rgb(86, 96, 117);">
+            </div>
         </div>
-        <div class="td-newsletter__field">
-          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
-      </div>
     </form>
-    <script>
-        function formSubmit(e) {
-          var req = new XMLHttpRequest();
-          req.open('POST', "https://newsletter.api.tampa.dev/subscribe", true);
-  
-          req.onload = function() { 
-            document.getElementById("mc-embedded-subscribe-form").reset();
-            document.getElementById("mc-embedded-subscribe").value = "Subscribed!"
-            document.getElementById("mc-embedded-subscribe").style.backgroundColor = "#B5E0B8"
-            console.log(req.responseText);
-          };
+    <script type="text/javascript">
+        function resetMailForm() {
+                document.getElementById("mc-embedded-subscribe-form").reset();
+                document.getElementById("mc-embedded-subscribe").value = "Subscribe"
+                document.getElementById("mc-embedded-subscribe").style.backgroundColor = "#fff"
+                document.getElementById("mc-embedded-subscribe").style.textTransform = "uppercase"
+                document.getElementById("mc-embedded-subscribe").style.color = "#566075"
+              }
 
-          req.onerror = function() {
-            console.log("Newsletter subscription failed.")
-          };
-
-          req.send(new FormData(e.target));
-
-          e.preventDefault();
-        }
-
-        (function () {document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", formSubmit)})();
+              function formSubmit(e) {
+                var req = new XMLHttpRequest();
+                req.open('POST', "https://newsletter.api.tampa.dev/subscribe", true);
+        
+                req.onload = function() { 
+                  document.getElementById("mc-embedded-subscribe-form").reset();
+                  document.getElementById("mc-embedded-subscribe").value = "Subscribed ✔️"
+                  document.getElementById("mc-embedded-subscribe").style.backgroundColor = "#B5E0B8"
+                  setTimeout(resetMailForm, 2000);
+                  console.log(req.responseText);
+                };
+      
+                req.onerror = function() {
+                  document.getElementById("mc-embedded-subscribe-form").reset();
+                  document.getElementById("mc-embedded-subscribe").value = "Something Broke 😔"
+                  document.getElementById("mc-embedded-subscribe").style.color = "#fff"
+                  document.getElementById("mc-embedded-subscribe").style.textTransform = "none"
+                  document.getElementById("mc-embedded-subscribe").style.backgroundColor = "#4e5569"
+                  setTimeout(resetMailForm, 2000);
+                  console.log("Newsletter subscription failed.")
+                };
+      
+                req.send(new FormData(e.target));
+      
+                e.preventDefault();
+              }
+      
+              (function () {document.getElementById("mc-embedded-subscribe-form").addEventListener("submit", formSubmit)})();
     </script>
-    <!--End mc_embed_signup-->
-  </section>
+</section>
 </div>
