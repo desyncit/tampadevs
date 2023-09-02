@@ -2,69 +2,32 @@
 
 ![GtuNm3R1yV](https://user-images.githubusercontent.com/10290348/162232393-26045f1f-7f79-466b-9686-47a77b72bd58.gif)
 
-## Installing the right version of node for this project
+## Local Development Environment
 
-This project currently uses Node version 17.9.1 as the preferred environment
+To run the site locally, you will need to have [Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) installed on your machine. Once you have Docker installed, you can run the following command to start the site locally:
 
-## Using an Eleventy.js Docker Image (easiest method)
-
-The easiest way to run a development environment for this site is to use [Docker](https://www.docker.com/).
-
-After installing Docker on your machine, run the following command to spin up a container with a functional Eleventy environment:
-
-```
-docker run --rm -v /path-to/this-repo/on-your/disk:/app --name eleventy -p 8080:8080 femtopixel/eleventy --serve 
+```bash
+docker-compose up
 ```
 
-**Note:** Replace `/path-to/this-repo/on-your/disk` in the above command with the local path to your clone of the `tampadevs` repository on disk.
-
-
-## Setting Up a Local Environment with NVM 
-
-We suggest using NVM, which manages the node-instance that you are using to run this project
-
-You can install nvm using the instructions at [NVM's official repository](https://github.com/nvm-sh/nvm).
-
-Now set the node version in the terminal for the Tampa Devs project:
+This will start the site locally and you should see output similar to the following:
 
 ```
-nvm install 17.9.1
-nvm use 17.9.1
+website-docker-11ty-1  | [11ty] Writing dist/talks/2022/20220803-cybersecurity/index.html from ./src/talks/2022/20220803-cybersecurity.md (liquid)
+website-docker-11ty-1  | [11ty] Writing dist/talks/2023/20230201-mobile-development/index.html from ./src/talks/2023/20230201-mobile-development.md (liquid)
+website-docker-11ty-1  | [11ty] Writing dist/talks/2023/20230315-career-forum/index.html from ./src/talks/2023/20230315-career-forum.md (liquid)
+website-docker-11ty-1  | [11ty] Copied 37 files / Wrote 54 files in 19.99 seconds (370.2ms each, v1.0.2)
+website-docker-11ty-1  | [11ty] Watching…
+website-docker-11ty-1  | [Browsersync] Access URLs:
+website-docker-11ty-1  |  --------------------------------
+website-docker-11ty-1  |     Local: http://localhost:8080
+website-docker-11ty-1  |  External: http://172.30.0.2:8080
+website-docker-11ty-1  |  --------------------------------
+website-docker-11ty-1  | [Browsersync] Serving files from: dist
 ```
 
-If you use a windows environment follow the commands here instead with NVM [https://github.com/coreybutler/nvm-windows](https://github.com/coreybutler/nvm-windows)
+You can then open your browser to [http://localhost:8080](http://localhost:8080) to view the site!
 
-### Global Installation
+_Note: The first time you run this container, it will take a few minutes to download the Docker image and install the dependencies. Be patient, and the environment will be ready once you see the output above._
 
-You'll want to install the CLI (command line interface) for eleventy. It's used to run the project
-
-```
-npm install -g @11ty/eleventy
-```
-
-Now run these commands while on the project
-
-```
-npm install
-npm run dev
-```
-
-Theoretically everything should work fine, and you can navigate to localhost:8080 and make changes / see them instantly on the site
-
-### Local Environment FAQ 
-
-Here are some common issues we've run into regarding installation problems with this repo.
-
-> I'm getting a node-gyp error
-
-It's probably a `sharp` module issue, this is used for image minimization. It runs best in a linux environment since it has a lot of dependencies associated with it. Try modifying the node version with `nvm` to see if you can fix it. There is also the potential to run this project in a docker environment, but have not been able to set it up (you need docker installed)
-
-> it says I need sass
-
-Run
-
-```
-npm install -g sass
-```
-
-*This project is tested with [BrowserStack](https://www.browserstack.com/).*
+_Note: If you are using Docker Desktop on Windows, you may need to add the project directory to the list of shared directories in Docker Desktop. See [this tutorial](https://dev.to/bogicevic7/windows-docker-shared-volume-folder-46d1)._
