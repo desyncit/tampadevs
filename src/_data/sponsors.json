@@ -55,6 +55,12 @@
     "name": "Hillsborough County",
     "logo": "hcc_logo.png",
     "href": "https://www.hillsboroughcounty.org/en?utm_source=tampadevs&utm_medium=referral&utm_campaign=community_sponsor",
+    "type": "none"
+  },
+  {
+    "name": "CodeBoxx",
+    "logo": "codeboxx.png",
+    "href": "https://www.academy.codeboxx.com/?utm_source=tampadevs&utm_medium=referral&utm_campaign=community_sponsor",
     "type": "gold"
   }
 ]
