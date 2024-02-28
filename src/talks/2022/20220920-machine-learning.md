@@ -5,7 +5,7 @@ date: 2022-09-20
 intro: Your crash course in machine learning!
 hero_img: /_assets/img/blog/2021/first_event_tampa_devs.jpg
 # above: hero img link left as is from template and seems to be inactive | comment date: 2023.11.01
-youtube_id: tCy9Mk4jjAs
+youtube_id: AkZ79tqzoFY
 ---
 
 ## Details and Agenda
