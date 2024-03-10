@@ -401,6 +401,10 @@ a:focus {
   margin-top: 5px;
 }
 
+.filter-red {
+  filter: invert(59%) sepia(43%) saturate(6782%) hue-rotate(331deg) brightness(106%) contrast(86%);
+}
+
 @media (min-width: 800px) {
   .td-header {
     padding-bottom: 66.66666vh;
