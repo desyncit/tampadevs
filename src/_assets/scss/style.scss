@@ -405,6 +405,12 @@ a:focus {
   filter: invert(59%) sepia(43%) saturate(6782%) hue-rotate(331deg) brightness(106%) contrast(86%);
 }
 
+@media (max-width: 867px) {
+  .next-event-container > iframe {
+    height: 450px !important;
+  }
+}
+
 @media (min-width: 800px) {
   .td-header {
     padding-bottom: 66.66666vh;
