@@ -31,3 +31,8 @@ You can then open your browser to [http://localhost:8080](http://localhost:8080)
 _Note: The first time you run this container, it will take a few minutes to download the Docker image and install the dependencies. Be patient, and the environment will be ready once you see the output above._
 
 _Note: If you are using Docker Desktop on Windows, you may need to add the project directory to the list of shared directories in Docker Desktop. See [this tutorial](https://dev.to/bogicevic7/windows-docker-shared-volume-folder-46d1)._
+
+
+## Testing
+
+This project is tested with [BrowserStack](https://www.browserstack.com/).
