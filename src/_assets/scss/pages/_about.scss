@@ -50,6 +50,7 @@
       font-size: 2.125rem;
       margin-bottom: 2rem;
       font-weight: 800;
+      color: #fafafa;
     }
     p {
       width: 96%;
@@ -123,6 +124,7 @@
         }
         &-title {
           font: 700 0.8rem/1.5 "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+          color: $colorOrange;
         }
         &-bio {
           margin: 0px;
