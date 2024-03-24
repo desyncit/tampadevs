@@ -78,7 +78,11 @@ layout: layouts/base.njk
     {# Github contributors #}
     <h3>Open Source Contributors</h3>
     <div class="sponsor-list sponsor-list__silver">
-      <img class="open-source-contributors-image" src="https://opencollective.com/tampadevs/contributors.svg?width=890&button=false" />
+      <picture>
+        <source media="(min-width: 768px)" srcset="https://opencollective.com/tampadevs/contributors.svg?width=890&button=false">
+        <source media="(min-width: 480px)" srcset="https://opencollective.com/tampadevs/contributors.svg?width=470&button=false">
+        <img src="https://opencollective.com/tampadevs/contributors.svg?width=310&button=false" alt="Contributors to tampadevs">
+      </picture>
       <div class="sponsor-button-wrapper contributors-cta-container">
         <a class="sponsor-button td-alert-banner" href="https://github.com/TampaDevs/tampadevs">Fork This Website</a>
       </div>
