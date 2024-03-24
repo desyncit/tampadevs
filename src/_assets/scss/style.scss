@@ -33,6 +33,27 @@ $colorBlue: #4e5569;
     box-sizing: inherit;
   }
 }
+html {
+  font-size: 100%;
+}
+
+
+body {
+  color: $colorBlue;
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+h1, h2 {
+  color: $colorOrange;
+}
+a {
+  color: $colorGreen;
+  text-decoration: none;
+  border-bottom: 1px solid $colorOrange;
+  transition: border 0.5s;
+}
 
 p {
   font-size: 1.1rem; // was 1 rem, may change back later
@@ -48,21 +69,6 @@ input,
 button {
   // outline: none;
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-}
-
-body {
-  color: $colorOrange;
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-a {
-  color: $colorGreen;
-  text-decoration: none;
-  border-bottom: 1px solid $colorOrange;
-  transition: border 0.5s;
 }
 
 a:hover {
@@ -82,6 +88,10 @@ a:focus {
   width: 100%;
   height: 0;
   padding-bottom: 80vh;
+
+  h1, h2 {
+    color: inherit;
+  }
 }
 
 .td-header__media {
@@ -180,7 +190,7 @@ a:focus {
   margin: 0 auto;
   max-width: 1020px;
   width: 100%;
-  padding: 0 50px;
+  padding: 0 1.5rem;
   overflow-x: hidden;
 }
 
@@ -189,6 +199,7 @@ a:focus {
 }
 
 .td-describer p:first-child {
+  color: $colorOrange;
   font-size: 2rem;
   line-height: 2.725rem;
 }
@@ -405,9 +416,14 @@ a:focus {
   filter: invert(59%) sepia(43%) saturate(6782%) hue-rotate(331deg) brightness(106%) contrast(86%);
 }
 
-@media (max-width: 867px) {
-  .next-event-container > iframe {
-    height: 450px !important;
+.next-event__widget {
+  &:where(iframe){
+    height: 500px;
+    width: 100%;
+    overflow-x: hidden;
+    @include bpMinSmall {
+      height: 210px;
+    }
   }
 }
 
