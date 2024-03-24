@@ -417,6 +417,9 @@ h1, h2 {
     height: 500px;
     width: 100%;
     overflow-x: hidden;
+    @include bpMinSmall {
+      height: 210px;
+    }
   }
 }
 
