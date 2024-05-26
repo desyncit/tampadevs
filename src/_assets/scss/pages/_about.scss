@@ -1,5 +1,7 @@
 @use "../variables";
 @use "../utilities";
+@use "../animations/marquee";
+
 .td-about {
   h2 {
     font-size: 30px;

@@ -1,40 +1,25 @@
+@use "vendor";
+@use "utilities";
+@use "variables";
+@use "global/global.scss";
+@use  "modules";
 
+@use "pages/about";
+@use "temp-style-relocation";
+@use "tdevs_custom";
 
-@import "animations/marquee";
+@use "text";
 
-@import "nav";
-@import "text";
-@import "time-list";
-@import "img";
-@import "form";
-
-
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,500,700,900");
-
-
-@import "global/global.scss";
-@import "utilities";
-@import  "modules";
-
-@import "pages/about";
-@import "temp-style-relocation";
-@import "tdevs_custom";
-@include spacings;
-@include bpMinXSmall {
-  @include spacings(xs\:);
+@include utilities.spacings;
+@include utilities.bpMinXSmall {
+  @include utilities.spacings(xs\:);
 }
-@include bpMinSmall {
-  @include spacings(sm\:);
+@include utilities.bpMinSmall {
+  @include utilities.spacings(sm\:);
 }
-@include bpMinMedium {
-  @include spacings(md\:);
+@include utilities.bpMinMedium {
+  @include utilities.spacings(md\:);
 }
-@include bpMinLarge {
-  @include spacings(lg\:);
+@include utilities.bpMinLarge {
+  @include utilities.spacings(lg\:);
 }
-
-
-
-// TODO: Reevaluate order of CSS in this file
-//       and the order of its imports
-// @import "block-jobs";

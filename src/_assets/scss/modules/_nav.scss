@@ -1,5 +1,5 @@
-@use "variables";
-@use "utilities";
+@use "../variables";
+@use "../utilities";
 
 .td-nav {
   background-color: variables.$colorBlue;
